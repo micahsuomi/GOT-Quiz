@@ -1,0 +1,27 @@
+.feedback-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback-header {
+    font-size: 23px;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+}
+.correct-answer {
+    color: green;
+}
+
+.wrong-answer {
+    color: rgb(199, 15, 15);
+}
+
+.wrong-text {
+    color: var(--wrong-answer);
+}
+.answer {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+}

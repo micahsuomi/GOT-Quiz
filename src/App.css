@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
+
+.App {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+}
+@media(max-width: 1250px) {
+    html {
+        font-size: 56%;
+    }
+}
+
+@media(max-width: 800px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media(max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --font-size-big: 4rem;
+    --font-size-medium: 2.4rem;
+    --font-size-medium-small: 1.6rem;
+
+    --font-size-small: 1rem; 
+    --font-size-verysmall: 1.3rem;
+
+    --button-blue-primary: rgb(24, 81, 95); 
+    --right-answer:rgb(26, 180, 65);
+    --wrong-answer:rgb(204, 38, 38);
+    --btn-secondary: rgb(39, 24, 95); 
+
+} 
