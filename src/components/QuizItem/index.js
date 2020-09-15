@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './quizitem.css';
+import './style.css';
 
 const QuizItem = ({ id, character, image }) => {
     

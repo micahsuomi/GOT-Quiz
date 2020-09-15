@@ -3,7 +3,7 @@
     position: relative;
     background-image: linear-gradient(to 
     right bottom, rgba(225, 228, 235, 0.5), rgba(147, 137, 167, 0.8)), 
-    url("../imgs/background.jpg");
+    url("../../imgs/background.jpg");
     background-size:cover;
     background-position: top;
     

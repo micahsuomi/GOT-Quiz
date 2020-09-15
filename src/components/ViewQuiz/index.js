@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import QuizForm from './QuizForm/index';
-import QuizDescription from './QuizDescription/index';
-import GameScore from './GameScore/index';
-import './viewquiz.css';
+import QuizForm from '../QuizForm';
+import QuizDescription from '../QuizDescription';
+import GameScore from '../GameScore';
+import './style.css';
 
 const ViewQuiz = (props) => {
     const [quiz, setQuiz] = useState([]);

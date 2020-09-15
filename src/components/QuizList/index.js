@@ -1,7 +1,7 @@
 import React from 'react';
-import QuizItem from './QuizItem';
-import logo from '../imgs/logo.png'
-import './quizlist.css';
+import QuizItem from '../QuizItem';
+import logo from '../../imgs/logo.png'
+import './style.css';
 
 const QuizList = ({ quizData }) => {
 
