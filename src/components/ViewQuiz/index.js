@@ -13,7 +13,6 @@ const ViewQuiz = (props) => {
   const [randomQuestions, setRandomQuestions] = useState([]);
   const [randomQuestion, setRandomQuestion] = useState({});
   const [isGameStarted, setIsGameStarted] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('')
   let [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState("");
   const [isSelected, setIsSelected] = useState(false);
@@ -57,7 +56,7 @@ const ViewQuiz = (props) => {
         setQuestionLoaded(true);
       }, 1000);
     } catch(err) {
-        setErrorMsg('Something went wrong')
+        console.log('Something went wrong')
     }
   };
 
