@@ -48,7 +48,7 @@
   padding: 1.3rem;
   width: 12rem;
   border: none;
-  background-color: rgb(122, 38, 52);
+  background-color: #5a1e5a;
   border-radius: 25px;
   color: #fff;
   font-weight: 700;
@@ -57,7 +57,7 @@
 }
 
 .btn-next:hover {
-  background-color: rgb(179, 93, 108);
+  background-color: #5a1e5a;
 }
 
 .btn-restart {

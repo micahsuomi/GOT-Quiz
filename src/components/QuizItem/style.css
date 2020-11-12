@@ -6,7 +6,7 @@
   width: 13.7rem;
 }
 .card-side {
-  height: 23rem;
+  height: 23.4rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,14 +14,25 @@
   border-radius: 3px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: all 1s ease;
+  transition: all 0.9s ease;
+  background-color: black;
   box-shadow: 0 3rem 6rem rgba(29, 26, 26, 0.5);
   text-align: center;
+  opacity: .3;
+  cursor: pointer;
+}
+.card-side:hover {
+  opacity: 1;
+  background-color: rgba(0,0,0,.5);
 }
 
 .play-game-btn:hover {
   transform: scale(1.1, 1.1);
   animation-name: grow;
+}
+
+.play-game-btn:active {
+  outline: none;
 }
 
 .card-side-front {

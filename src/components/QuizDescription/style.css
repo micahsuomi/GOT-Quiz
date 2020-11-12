@@ -71,3 +71,7 @@
   transform: scale(1.02, 1.02);
   background-color: #5a1e5a;
 }
+
+.btn-play:active {
+  outline: none;
+}

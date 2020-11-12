@@ -1,11 +1,14 @@
 //QUIZ QUESTIONS
+import { v4 as uuidv4 } from "uuid";
+
 import kahlImage from "../imgs/khal-drogo.jpg";
 import kahlImageSmall from "../imgs/khal-small.jpg";
-import { v4 as uuidv4 } from "uuid";
 import tyronImage from "../imgs/tyron-big.png";
 import tyronSmall from "../imgs/tyron-small.png";
 import danySmall from "../imgs/dany.png";
+import danyBig from "../imgs/dany-big.jpg"
 import jonSmall from "../imgs/jon-small.png";
+import jonBig from "../imgs/jon-big.jpg";
 import aryaSmall from "../imgs/arya-small.png";
 
 export const data = [
@@ -144,7 +147,7 @@ export const data = [
   {
     id: uuidv4(),
     character: "Daenerys Targaryen",
-    img: danySmall,
+    img: danyBig,
     imgPreview: danySmall,
     characterDescription: 'Queen Daenerys I Targaryen, also known as Daenerys Stormborn, and colloquially known as Dany, was the younger sister of Rhaegar Targaryen and Viserys Targaryen and only daughter of King Aerys II Targaryen and Queen Rhaella Targaryen, who were both ousted from the Iron Throne during Robert\'s Rebellion.',
 
@@ -170,11 +173,11 @@ export const data = [
 
       {
         question:
-          "Who does Khal Drogo kill by \n pouring molten gold in his head?",
+          "Who is the leader or the kahl when Dany is prisoner of the kahlazar?",
         answers: [
-          { text: "Viserys", correct: true },
-          { text: "Bronn", correct: false },
-          { text: "Theon", correct: false },
+          { text: "Kahl Drogo", correct: false },
+          { text: "Kahl Seru", correct: false },
+          { text: "Kahl Moro", correct: true },
         ],
       },
 
@@ -210,7 +213,7 @@ export const data = [
   {
     id: uuidv4(),
     character: "Jon Snow",
-    img: jonSmall,
+    img: jonBig,
     imgPreview: jonSmall,
     characterDescription: 'Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna\'s brother, and raised alongside his lawful children at Winterfell, the seat of House Stark. However, his true parentage is kept secret from everyone, including Jon himself, in order to protect him from those that sought the complete annihilation of House Targaryen after Robert\'s Rebellion and to maintain order in the realm.',
 
