@@ -1,23 +1,22 @@
 .game-score {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 25%;
-    right: 20%;
-    line-height: 2;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  line-height: 2;
 }
 
 .game-score__header {
-    font-size: var(--font-size-medium);
-    font-weight: 700;
-    margin: 1rem;
-    color: whitesmoke;
+  font-size: var(--font-size-medium);
+  font-weight: 700;
+  margin: 1rem;
+  color: whitesmoke;
 }
 
 .game-score__score {
-    color: whitesmoke;
-    font-size: var(--font-size-medium-small)
+  color: whitesmoke;
+  font-size: var(--font-size-medium-small);
 }

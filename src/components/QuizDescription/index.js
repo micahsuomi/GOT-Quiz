@@ -1,36 +1,43 @@
-import React from 'react';
-import './style.css';
+import React from "react";
 
-const QuizDescription = ({ character, startGame, isGameStarted }) => {
-    return (
-        <div className="description-wrapper">
+import "./style.css";
 
-        <div className="right-text">
+const QuizDescription = ({ character, characterDescription, startGame, isGameStarted }) => {
+  return (
+    <div className="description-wrapper">
+      <div className="right-text">
         <div className="right-description">
-            <h2 className="description-header">{character}</h2>
-            <p className="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, laborum ratione? Pariatur exercitationem, sequi obcaecati quia quod id nesciunt consequatur officiis vel aspernatur officia commodi magni, repellat labore debitis nulla atque? Porro quaerat necessitatibus, voluptatum magni molestias officia aperiam odio.</p>
-            <p className="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, laborum ratione? Pariatur exercitationem, sequi obcaecati quia quod id nesciunt consequatur officiis vel aspernatur officia commodi magni. </p>
-          
-            <ul className="strenghts-list">
-                <li className="strenghts-list-item"><i className="fas fa-fist-raised fa-2x strength-icon"></i> Strenght</li>
-                <li className="strenghts-list-item"><i className="fas fa-running fa-2x strength-icon"></i> Speed</li>
-                <li className="strenghts-list-item"><i className="fas fa-hat-wizard fa-2x strength-icon"></i> Magic</li>
-                <li className="strenghts-list-item"><i className="fas fa-heartbeat fa-2x strength-icon"></i> Health</li>
-            </ul>
-            </div>
-            {
-                !isGameStarted ? 
-                <div className="btn-play-container">
-                <button className="btn-play grow" onClick={startGame}>Play {character} Quiz</button>     
-            </div> :
-            null
-            }
-            </div>
+          <h2 className="description-header">{character}</h2>
+          <p className="paragraph">
+           {characterDescription}
+          </p>
 
-          
-          
-            </div>
-    )
-}
+          <ul className="strenghts-list">
+            <li className="strenghts-list-item">
+              <i className="fas fa-fist-raised fa-2x strength-icon"></i>{" "}
+              Strenght
+            </li>
+            <li className="strenghts-list-item">
+              <i className="fas fa-running fa-2x strength-icon"></i> Speed
+            </li>
+            <li className="strenghts-list-item">
+              <i className="fas fa-hat-wizard fa-2x strength-icon"></i> Magic
+            </li>
+            <li className="strenghts-list-item">
+              <i className="fas fa-heartbeat fa-2x strength-icon"></i> Health
+            </li>
+          </ul>
+        </div>
+        {!isGameStarted ? (
+          <div className="btn-play-container">
+            <button className="btn-play grow" onClick={startGame}>
+              Play {character} Quiz
+            </button>
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+};
 
 export default QuizDescription;

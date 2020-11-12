@@ -1,76 +1,73 @@
 .description-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-@media(max-width: 800px) {
-    .description-wrapper {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 800px) {
+  .description-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 .right-text {
-    padding: 2rem;
+  padding: 2rem;
 }
 .description-header {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: var(--font-size-medium);
-    color: whitesmoke;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-medium);
+  color: whitesmoke;
 }
 
 .paragraph {
-    font-size: var(--font-size-small);
-    line-height: 1.4;
-    color: whitesmoke;
-
+  font-size: var(--font-size-small);
+  line-height: 1.4;
+  color: whitesmoke;
 }
 .strenghts-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    align-items: center;
-
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
 }
 
 .strenghts-list-item {
-    margin: .7rem;
-    text-transform: uppercase;
-    margin-left: .7rem;
-    font-weight: 700;
-    font-size: var(--font-size-verysmall);
+  margin: 0.7rem;
+  text-transform: uppercase;
+  margin-left: 0.7rem;
+  font-weight: 700;
+  font-size: var(--font-size-verysmall);
 }
 
 .strength-icon {
-    color: rgb(255, 255, 255);
-    margin-right: .5rem;
-    opacity: .7;
+  color: rgb(255, 255, 255);
+  margin-right: 0.5rem;
+  opacity: 0.7;
 }
 
 .btn-play-container {
-    text-align: center;
-    margin-top: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .btn-play {
-    width: 15rem;
-    background-color: rgb(100, 40, 40);
-    padding: 1.2rem;
-    border:none;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-    box-shadow: 0 2rem 3rem rgb(59, 51, 51);
+  width: 15rem;
+  background-color: #5a1e5a;
+  padding: 1.2rem;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 1rem 2rem rgb(59, 51, 51);
 }
 
 .btn-play:hover {
-    transform: scale(1.02,1.02);
-    background-color: rgb(126, 24, 24);
+  transform: scale(1.02, 1.02);
+  background-color: #5a1e5a;
 }
-
