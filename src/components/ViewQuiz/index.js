@@ -29,7 +29,7 @@ const ViewQuiz = (props) => {
     });
     setQuiz(foundQuiz);
   }, [quiz, props.match.params.id, props.quizData]);
-  console.log(quiz)
+
   useEffect(() => {
     setRandomQuestion(randomQuestions[currentQuestionIndex]);
   }, [randomQuestions, currentQuestionIndex]);
@@ -48,15 +48,15 @@ const ViewQuiz = (props) => {
   //loads random questions with async and set timeout to return the questions in random order
   const startGame = async () => {
     try {
-      setTimeout(async() => {
+      setTimeout(async () => {
         let randomQuiz = await quiz.questions.sort(() => Math.random() - 0.5);
         setIsGameStarted(true);
         setIsGameFinished(false);
         setRandomQuestions(randomQuiz);
         setQuestionLoaded(true);
       }, 1000);
-    } catch(err) {
-        console.log('Something went wrong')
+    } catch (err) {
+      console.log("Something went wrong");
     }
   };
 
@@ -73,10 +73,12 @@ const ViewQuiz = (props) => {
       setIsCorrect(true);
       setIsWrong(false);
       setScore(score + 1);
+      console.log("correct", score);
     } else {
       setIsCorrect(false);
       setIsWrong(true);
       setScore(score + 0);
+      console.log("wrong", score);
     }
   };
 
@@ -89,6 +91,7 @@ const ViewQuiz = (props) => {
     setIsGameStarted(false);
     setIsGameFinished(false);
     setCurrentQuestionIndex(0);
+    setScore(0);
   };
 
   return (

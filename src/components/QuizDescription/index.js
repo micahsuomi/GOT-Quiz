@@ -2,15 +2,18 @@ import React from "react";
 
 import "./style.css";
 
-const QuizDescription = ({ character, characterDescription, startGame, isGameStarted }) => {
+const QuizDescription = ({
+  character,
+  characterDescription,
+  startGame,
+  isGameStarted,
+}) => {
   return (
     <div className="description-wrapper">
       <div className="right-text">
         <div className="right-description">
           <h2 className="description-header">{character}</h2>
-          <p className="paragraph">
-           {characterDescription}
-          </p>
+          <p className="paragraph">{characterDescription}</p>
 
           <ul className="strenghts-list">
             <li className="strenghts-list-item">

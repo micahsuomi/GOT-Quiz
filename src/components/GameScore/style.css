@@ -20,3 +20,10 @@
   color: whitesmoke;
   font-size: var(--font-size-medium-small);
 }
+
+@media screen and (max-width: 500px) {
+  .game-score {
+    top: 67%;
+    right: 25%;
+  }
+}

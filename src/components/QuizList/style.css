@@ -1,6 +1,7 @@
 .container {
   padding: 2rem 2rem;
   color: rgb(199, 187, 187);
+  min-height: 100vh;
 }
 
 .quiz-header {
@@ -16,6 +17,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -69,5 +72,14 @@
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .window-container {
+    grid-template-columns: 1fr;
+  }
+  .btn-choose {
+    margin-bottom: 7rem;
   }
 }

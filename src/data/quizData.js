@@ -6,7 +6,7 @@ import kahlImageSmall from "../imgs/khal-small.jpg";
 import tyronImage from "../imgs/tyron-big.png";
 import tyronSmall from "../imgs/tyron-small.png";
 import danySmall from "../imgs/dany.png";
-import danyBig from "../imgs/dany-big.jpg"
+import danyBig from "../imgs/dany-big.jpg";
 import jonSmall from "../imgs/jon-small.png";
 import jonBig from "../imgs/jon-big.jpg";
 import aryaSmall from "../imgs/arya-small.png";
@@ -17,7 +17,8 @@ export const data = [
     character: "Kahl Drogo",
     img: kahlImage,
     imgPreview: kahlImageSmall,
-    characterDescription: 'Drogo is a khal or warlord of the Dothraki, the famed nomadic horse-lords of the eastern continent beyond the Narrow Sea. The Dothraki are fierce warriors, skilled in battle, unrelenting in combat and known for savagery towards non-Dothraki. Amongst their own people they have a code of honor, albeit still a harsh and unforgiving one. Drogo was very young to have his own khalasar, particularly such a large one. He is a legendary warrior and has never been defeated in battle. Drogo desired the most beautiful and exotic woman in the world as his khaleesi or wife, and enlisted Magister Illyrio Mopatis of Pentos to help him find such a woman.',
+    characterDescription:
+      "Drogo is a khal or warlord of the Dothraki, the famed nomadic horse-lords of the eastern continent beyond the Narrow Sea. The Dothraki are fierce warriors, skilled in battle, unrelenting in combat and known for savagery towards non-Dothraki. Amongst their own people they have a code of honor, albeit still a harsh and unforgiving one. Drogo was very young to have his own khalasar, particularly such a large one. He is a legendary warrior and has never been defeated in battle. Drogo desired the most beautiful and exotic woman in the world as his khaleesi or wife, and enlisted Magister Illyrio Mopatis of Pentos to help him find such a woman.",
 
     questions: [
       //object
@@ -83,7 +84,8 @@ export const data = [
     character: "Tyron Lannister",
     img: tyronImage,
     imgPreview: tyronSmall,
-    characterDescription: 'Lord Tyrion Lannister is the youngest child of Lord Tywin Lannister and younger brother of Cersei and Jaime Lannister. A dwarf, he uses his wit and intellect to overcome the prejudice he faces. He is the current Lord of Casterly Rock and Hand of the King to Brandon Stark.',
+    characterDescription:
+      "Lord Tyrion Lannister is the youngest child of Lord Tywin Lannister and younger brother of Cersei and Jaime Lannister. A dwarf, he uses his wit and intellect to overcome the prejudice he faces. He is the current Lord of Casterly Rock and Hand of the King to Brandon Stark.",
 
     questions: [
       //object
@@ -149,16 +151,18 @@ export const data = [
     character: "Daenerys Targaryen",
     img: danyBig,
     imgPreview: danySmall,
-    characterDescription: 'Queen Daenerys I Targaryen, also known as Daenerys Stormborn, and colloquially known as Dany, was the younger sister of Rhaegar Targaryen and Viserys Targaryen and only daughter of King Aerys II Targaryen and Queen Rhaella Targaryen, who were both ousted from the Iron Throne during Robert\'s Rebellion.',
+    characterDescription:
+      "Queen Daenerys I Targaryen, also known as Daenerys Stormborn, and colloquially known as Dany, was the younger sister of Rhaegar Targaryen and Viserys Targaryen and only daughter of King Aerys II Targaryen and Queen Rhaella Targaryen, who were both ousted from the Iron Throne during Robert's Rebellion.",
 
     questions: [
       //object
       {
-        question: "What does Daenerys mean when she says 'Shekh ma shieraki anni' to Khal Drogo?",
+        question:
+          "What does Daenerys mean when she says 'Shekh ma shieraki anni' to Khal Drogo?",
         answers: [
           { text: "Moon of my life", correct: false },
           { text: "My sun and stars", correct: true },
-          { text: "Sound did silence me", correct: false }
+          { text: "Sound did silence me", correct: false },
         ],
       },
 
@@ -215,7 +219,8 @@ export const data = [
     character: "Jon Snow",
     img: jonBig,
     imgPreview: jonSmall,
-    characterDescription: 'Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna\'s brother, and raised alongside his lawful children at Winterfell, the seat of House Stark. However, his true parentage is kept secret from everyone, including Jon himself, in order to protect him from those that sought the complete annihilation of House Targaryen after Robert\'s Rebellion and to maintain order in the realm.',
+    characterDescription:
+      "Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna's brother, and raised alongside his lawful children at Winterfell, the seat of House Stark. However, his true parentage is kept secret from everyone, including Jon himself, in order to protect him from those that sought the complete annihilation of House Targaryen after Robert's Rebellion and to maintain order in the realm.",
 
     questions: [
       //object
@@ -229,7 +234,8 @@ export const data = [
       },
 
       {
-        question: "What piece of fencing advice did Jon Snow give to Arya Stark? 'Stick them with the …'?",
+        question:
+          "What piece of fencing advice did Jon Snow give to Arya Stark? 'Stick them with the …'?",
         answers: [
           { text: "...pointy end", correct: true },
           { text: "'...prickly end'", correct: false },
@@ -281,7 +287,8 @@ export const data = [
     character: "Arya Stark",
     img: "https://s3.r29static.com/bin/entry/74a/x,80/2171313/image.jpg",
     imgPreview: aryaSmall,
-    characterDescription: 'Arya Stark is the youngest daughter and third child of Lady Catelyn and Lord Ned Stark. Arya was born and raised at Winterfell. She has an older sister, Sansa, an older brother Robb, two younger brothers Bran and Rickon Stark, and a "bastard half-brother" Jon Snow. Arya rejects the notion that she must become a lady and marry for influence and power. Instead, she believes that she can forge her own destiny. She is fascinated by warfare and training in the use of arms, and is bored by embroidery and other "lady-like" pursuits. She takes after her father and has a quarrelsome relationship with her sister Sansa, due to their contrasting interests and personalities. She is close to her "half-brother" Jon, who is also something of an outsider.',
+    characterDescription:
+      'Arya Stark is the youngest daughter and third child of Lady Catelyn and Lord Ned Stark. Arya was born and raised at Winterfell. She has an older sister, Sansa, an older brother Robb, two younger brothers Bran and Rickon Stark, and a "bastard half-brother" Jon Snow. Arya rejects the notion that she must become a lady and marry for influence and power. Instead, she believes that she can forge her own destiny. She is fascinated by warfare and training in the use of arms, and is bored by embroidery and other "lady-like" pursuits. She takes after her father and has a quarrelsome relationship with her sister Sansa, due to their contrasting interests and personalities. She is close to her "half-brother" Jon, who is also something of an outsider.',
 
     questions: [
       //object

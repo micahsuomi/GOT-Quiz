@@ -30,19 +30,22 @@ html {
 
 @media (max-width: 500px) {
   html {
-    font-size: 45%;
+    font-size: 50%;
   }
 }
 
 body {
-font-family: 'Montserrat', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-h1,h2,h3,h4 {
-  font-family: 'Montserrat', sans-serif;  
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
 }
 p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 :root {

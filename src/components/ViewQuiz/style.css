@@ -92,3 +92,16 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .description-container {
+    grid-template-columns: 1fr;
+  }
+  .big-image-left {
+    height: 324px;
+    width: 291px;
+  }
+  .question {
+    font-size: var(--font-size-medium);
+  }
+}
