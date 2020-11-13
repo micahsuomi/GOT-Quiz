@@ -98,8 +98,11 @@
     grid-template-columns: 1fr;
   }
   .big-image-left {
-    height: 324px;
-    width: 291px;
+    height: 276px;
+    width: 207px;
+  }
+  .description-container {
+    padding: 1rem 2rem;
   }
   .question {
     font-size: var(--font-size-medium);
