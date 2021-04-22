@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import Button from "../Button";
+import { locale } from "../../utils/locale";
+
 import "./style.css";
 
 const QuizItem = ({ id, character, image }) => {
@@ -10,7 +13,14 @@ const QuizItem = ({ id, character, image }) => {
       <div className="card-side">
         <h3 className="main-title">{character}</h3>
         <NavLink to={`/quiz/${id}`}>
-          <button className="play-game-btn play-game-btn-2 grow">Play</button>
+          <Button
+            text={locale.quizCard.btnText}
+            buttonColor="primary"
+            rounded
+            size="md"
+            margin
+            marginBottom
+          />
         </NavLink>
       </div>
     </div>

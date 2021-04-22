@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-import Background from '../Background';
+import Background from "../Background";
 import QuizForm from "../QuizForm";
 import QuizDescription from "../QuizDescription";
+import Button from "../Button";
 import GameScore from "../GameScore";
+import { locale } from "../../utils/locale";
 
 import "./style.css";
 
@@ -22,7 +24,7 @@ const ViewQuiz = (props) => {
   const [isWrong, setIsWrong] = useState(false);
   const [score, setScore] = useState(0);
   const [isGameFinished, setIsGameFinished] = useState(false);
-
+  console.log(props);
   //loads all the questions
   useEffect(() => {
     const id = props.match.params.id;
@@ -56,9 +58,9 @@ const ViewQuiz = (props) => {
         setIsGameFinished(false);
         setRandomQuestions(randomQuiz);
         setQuestionLoaded(true);
-      }, 1000);
+      }, 500);
     } catch (err) {
-      console.log("Something went wrong");
+      return err;
     }
   };
 
@@ -98,62 +100,67 @@ const ViewQuiz = (props) => {
 
   return (
     <Background>
-    <div className="quiz-container"> 
-    <div className="quiz-wrapper">
-      <div className="exit">
-        <NavLink to="/quiz" className="exit__link">
-          <span className="exit__text">Exit Quiz</span>
-          <i className="fas fa-times-circle exit__icon"></i>
-        </NavLink>
-      </div>
-      <div className="description-container">
-        <div className="big-image-left">
-          <img src={quiz.img} alt="quiz character" className="big-img-1" />
-        </div>
+      <div className="quiz-container">
+        <div className="quiz-wrapper">
+          <div className="exit">
+            <NavLink to="/quiz" className="exit__link">
+              <span className="exit__text">Exit Quiz</span>
+              <i className="fas fa-times-circle exit__icon"></i>
+            </NavLink>
+          </div>
+          <div className="description-container">
+            <div className="big-image-left">
+              <img src={quiz.img} alt="quiz character" className="big-img-1" />
+            </div>
 
-        {isGameStarted || isGameFinished ? null : (
-          <QuizDescription
-            quiz={quiz}
-            characterDescription={quiz.characterDescription}
-            isGameStarted={isGameStarted}
-            startGame={startGame}
-          />
-        )}
+            {isGameStarted || isGameFinished ? null : (
+              <QuizDescription
+                quiz={quiz}
+                character={quiz.character}
+                characterDescription={quiz.characterDescription}
+                isGameStarted={isGameStarted}
+                startGame={startGame}
+              />
+            )}
 
-        {isGameStarted && !isGameFinished ? (
-          <div className="question-container">
-            {questionLoaded ? (
-              <div>
-                {isAnswered ? null : (
-                  <h1 className="question">{randomQuestion.question}</h1>
-                )}
-                <QuizForm
-                  handleSubmit={handleSubmit}
-                  isAnswered={isAnswered}
-                  handleChange={handleChange}
-                  randomQuestion={randomQuestion}
-                  isCorrect={isCorrect}
-                  isWrong={isWrong}
-                  isSelected={isSelected}
-                />
+            {isGameStarted && !isGameFinished ? (
+              <div className="question-container">
+                {questionLoaded ? (
+                  <div>
+                    {isAnswered ? null : (
+                      <h2 className="question">{randomQuestion.question}</h2>
+                    )}
+                    <QuizForm
+                      handleSubmit={handleSubmit}
+                      isAnswered={isAnswered}
+                      handleChange={handleChange}
+                      randomQuestion={randomQuestion}
+                      isCorrect={isCorrect}
+                      isWrong={isWrong}
+                      isSelected={isSelected}
+                    />
 
-                <div className="score-box">
-                  <span className="score score2"></span>
-                </div>
-                {!isGameFinished && isAnswered ? (
-                  <button className="btn-next" onClick={nextQuestion}>
-                    Next
-                  </button>
+                    <div className="score-box">
+                      <span className="score score2"></span>
+                    </div>
+                    {!isGameFinished && isAnswered ? (
+                      <Button
+                        resOnClick={nextQuestion}
+                        text={locale.quiz.next.btnText}
+                        rounded
+                        size="md"
+                        margin
+                      />
+                    ) : null}
+                  </div>
                 ) : null}
               </div>
+            ) : isGameFinished ? (
+              <GameScore score={score} quiz={quiz} restartGame={restartGame} />
             ) : null}
           </div>
-        ) : isGameFinished ? (
-          <GameScore score={score} quiz={quiz} restartGame={restartGame} />
-        ) : null}
+        </div>
       </div>
-    </div>
-    </div> 
     </Background>
   );
 };

@@ -22,7 +22,7 @@
   grid-gap: 1rem;
   justify-items: center;
   align-items: center;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .exit {
@@ -108,18 +108,22 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .description-container {
     grid-template-columns: 1fr;
+    padding: 3rem 0;
   }
   .big-image-left {
-    height: 276px;
-    width: 207px;
-  }
-  .description-container {
-    padding: 1rem 2rem;
+    height: 302px;
+    width: 241px;
   }
   .question {
     font-size: var(--font-size-medium);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .question {
+    font-size: var(--font-size-small);
   }
 }

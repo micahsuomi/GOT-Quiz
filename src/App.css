@@ -16,23 +16,6 @@ html {
   min-height: 100%;
   overflow: hidden;
 }
-@media (max-width: 1250px) {
-  html {
-    font-size: 56%;
-  }
-}
-
-@media (max-width: 800px) {
-  html {
-    font-size: 50%;
-  }
-}
-
-@media (max-width: 500px) {
-  html {
-    font-size: 50%;
-  }
-}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -47,18 +30,21 @@ h4 {
 p {
   font-family: "Source Sans Pro", sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 :root {
+  /* fonts */
   --font-size-big: 4rem;
   --font-size-medium: 2.4rem;
   --font-size-medium-small: 1.6rem;
-
   --font-size-small: 1rem;
   --font-size-verysmall: 1.3rem;
-
+  /* color palette */
   --primary: #5a1e5a;
   --primary-light: #9c399c;
   --right-answer: rgb(26, 180, 65);
   --wrong-answer: rgb(204, 38, 38);
-  --btn-secondary: rgb(39, 24, 95);
+  --secondary: rgb(39, 24, 95);
+  --secondary-light: rgb(68, 42, 163);
 }

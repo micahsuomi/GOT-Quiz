@@ -1,5 +1,8 @@
 import React from "react";
 
+import Button from "../Button";
+import { locale } from "../../utils/locale";
+
 import "./style.css";
 
 const GameScore = ({ score, quiz, restartGame }) => {
@@ -9,9 +12,13 @@ const GameScore = ({ score, quiz, restartGame }) => {
       <h3 className="game-score__score">
         You got {score} out of {quiz.questions.length} questions.
       </h3>
-      <button className="btn-restart" onClick={restartGame}>
-        Play Again
-      </button>
+      <Button
+        resOnClick={restartGame}
+        text={locale.quiz.endGame.btnText}
+        size="md"
+        rounded
+        margin
+      />
     </div>
   );
 };

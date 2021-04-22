@@ -1,6 +1,9 @@
 import React from "react";
 
 import FeedBack from "../FeedBack/index";
+import Button from "../Button";
+import { locale } from "../../utils/locale";
+
 import "./style.css";
 
 const QuizForm = ({
@@ -32,7 +35,7 @@ const QuizForm = ({
         <FeedBack isCorrect={isCorrect} isWrong={isWrong} />
       )}
       {isAnswered || !isSelected ? null : (
-        <button className="btn-answer__select">Select</button>
+        <Button text={locale.quiz.questions.btnText} rounded size="md" buttonColor= "secondary"/>
       )}
     </form>
   );

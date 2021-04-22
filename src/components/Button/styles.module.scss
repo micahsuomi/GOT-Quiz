@@ -1,0 +1,60 @@
+.btn {
+    padding: .8rem;
+    border: none;
+    background-color: var(--button-blue-primary);
+    color: #fff;
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--primary);
+    span {
+      text-decoration: none;
+    }
+  }
+
+  .btn_large {
+    width: 12rem;
+  }
+
+  .btn_medium {
+    width: 10rem;
+  }
+
+  .btn_small {
+    width: 8rem;
+  }
+  
+  .btn_margin {
+    margin: 1rem;
+  }
+
+  .btn_margin_bottom {
+    margin-bottom: 2rem;
+  }
+
+  .btn_secondary {
+    background-color: var(--secondary);
+  }
+  .btn:hover {
+    transform: scale(1.03);
+    transition: .1s ease-in-out;
+    background-color: var(--primary-light);
+    animation-name: grow;
+  }
+  
+  .btn_secondary:hover {
+    background-color: var(--secondary-light);
+  }
+  .btn:active {
+    outline: none;
+  }
+
+  .rounded {
+    border-radius: 50px;
+  }

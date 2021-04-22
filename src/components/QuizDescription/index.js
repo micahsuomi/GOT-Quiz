@@ -1,5 +1,8 @@
 import React from "react";
 
+import Button from "../Button";
+import { locale } from "../../utils/locale";
+
 import "./style.css";
 
 const QuizDescription = ({
@@ -12,14 +15,12 @@ const QuizDescription = ({
     <div className="description-wrapper">
       <div className="right-text">
         <div className="right-description">
-          <h2 className="description-header">{character}</h2>
+          <h3 className="description-header">{character}</h3>
           <p className="paragraph">{characterDescription}</p>
         </div>
         {!isGameStarted ? (
           <div className="btn-play-container">
-            <button className="btn-play grow" onClick={startGame}>
-              Play {character} Quiz
-            </button>
+            <Button resOnClick={startGame} text={locale.quizItem.btnText} rounded size="md"/>
           </div>
         ) : null}
       </div>

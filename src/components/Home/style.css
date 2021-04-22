@@ -36,7 +36,7 @@
   width: 14%;
 }
 
-.button-wrapper {
+.btn- {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,5 +87,21 @@
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title-logo {
+    width: 46%;
+  }
+  
+  .quiz-font {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-logo {
+    width: 66%;
   }
 }

@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Background from "../Background";
 import QuizItem from "../QuizItem";
 import logo from "../../imgs/logo.png";
+import { locale } from "../../utils/locale";
 
 import "./style.css";
 
@@ -36,7 +37,7 @@ const QuizList = ({ quizData }) => {
         <div className="window-container">{formattedQuizData}</div>
         <div className="button-wrapper">
           <button className="btn btn-choose">
-            Choose your favourite character!
+            {locale.quizList.header.title}
           </button>
         </div>
       </div>

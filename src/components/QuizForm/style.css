@@ -107,6 +107,11 @@ input[type=radio] + label:hover {
 }
 
 @media screen and (max-width: 500px) {
+  .radio-input input[type=radio] {
+    height: 42px;
+    right: 40%;
+    margin-top: 1.6rem;
+  }
   .btn-answer {
     width: 28rem;
     font-size: 17px;

@@ -78,7 +78,23 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .window-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 500px) {
+  .nav-logo {
+    margin-left: 4.2rem;
+  }
+  .logo {
+    width: 15%;
+  }
+  
+  .main-page-font {
+    width: 15%;
+  }
   .window-container {
     grid-template-columns: 1fr;
   }
