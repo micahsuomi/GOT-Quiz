@@ -90,57 +90,11 @@ export const data = [
     questions: [
       //object
       {
-        question: "In which battle did Tyron get his scar from",
+        question: "Which battle did Tyron get his scar from?",
         answers: [
           { text: "Battle of the Blackwater", correct: true },
           { text: "Battle of the Bastards", correct: false },
           { text: "Battle of the Goldroad", correct: false },
-        ],
-      },
-
-      {
-        question: "To which clan does Khal belong to?",
-        answers: [
-          { text: "Night Watch", correct: false },
-          { text: "Dothrakis", correct: true },
-          { text: "White Walkers", correct: false },
-        ],
-      },
-
-      {
-        question:
-          "Who does Khal Drogo kill by \n pouring molten gold in his head?",
-        answers: [
-          { text: "Viserys", correct: true },
-          { text: "Bronn", correct: false },
-          { text: "Theon", correct: false },
-        ],
-      },
-
-      {
-        question: "Which actor plays Khal Drogo?",
-        answers: [
-          { text: "Nikolaj Coster-Waldau", correct: false },
-          { text: "Jason Momoa", correct: true },
-          { text: "Hafþór Júlíus Björnsson", correct: false },
-        ],
-      },
-
-      {
-        question: "What is that Drogo's people fear?",
-        answers: [
-          { text: "The sea", correct: true },
-          { text: "The forest", correct: false },
-          { text: "The desert", correct: false },
-        ],
-      },
-
-      {
-        question: "What is it true in Khal's culture \n to be a leader?",
-        answers: [
-          { text: "Branding a sword", correct: false },
-          { text: "Raping women", correct: false },
-          { text: "Riding a horse", correct: true },
         ],
       },
     ],
@@ -155,7 +109,6 @@ export const data = [
       "Queen Daenerys I Targaryen, also known as Daenerys Stormborn, and colloquially known as Dany, was the younger sister of Rhaegar Targaryen and Viserys Targaryen and only daughter of King Aerys II Targaryen and Queen Rhaella Targaryen, who were both ousted from the Iron Throne during Robert's Rebellion.",
 
     questions: [
-      //object
       {
         question:
           "What does Daenerys mean when she says 'Shekh ma shieraki anni' to Khal Drogo?",
@@ -186,29 +139,11 @@ export const data = [
       },
 
       {
-        question: "Which actor plays Khal Drogo?",
+        question: "Which of the following Dany does not style herself of?",
         answers: [
-          { text: "Nikolaj Coster-Waldau", correct: false },
-          { text: "Jason Momoa", correct: true },
-          { text: "Hafþór Júlíus Björnsson", correct: false },
-        ],
-      },
-
-      {
-        question: "What is that Drogo's people fear?",
-        answers: [
-          { text: "The sea", correct: true },
-          { text: "The forest", correct: false },
-          { text: "The desert", correct: false },
-        ],
-      },
-
-      {
-        question: "What is it true in Khal's culture \n to be a leader?",
-        answers: [
-          { text: "Branding a sword", correct: false },
-          { text: "Raping women", correct: false },
-          { text: "Riding a horse", correct: true },
+          { text: "Breaker of Chains", correct: false },
+          { text: "First of Her Name", correct: false },
+          { text: "The Dragons' Whisperer", correct: true },
         ],
       },
     ],
@@ -223,7 +158,6 @@ export const data = [
       "Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna's brother, and raised alongside his lawful children at Winterfell, the seat of House Stark. However, his true parentage is kept secret from everyone, including Jon himself, in order to protect him from those that sought the complete annihilation of House Targaryen after Robert's Rebellion and to maintain order in the realm.",
 
     questions: [
-      //object
       {
         question: "What is the name of Jon Snow's Direwolf?",
         answers: [
@@ -240,43 +174,6 @@ export const data = [
           { text: "...pointy end", correct: true },
           { text: "'...prickly end'", correct: false },
           { text: "'...sharp end'", correct: false },
-        ],
-      },
-
-      {
-        question:
-          "Who does Khal Drogo kill by \n pouring molten gold in his head?",
-        answers: [
-          { text: "Viserys", correct: true },
-          { text: "Bronn", correct: false },
-          { text: "Theon", correct: false },
-        ],
-      },
-
-      {
-        question: "Which actor plays Khal Drogo?",
-        answers: [
-          { text: "Nikolaj Coster-Waldau", correct: false },
-          { text: "Jason Momoa", correct: true },
-          { text: "Hafþór Júlíus Björnsson", correct: false },
-        ],
-      },
-
-      {
-        question: "What is that Drogo's people fear?",
-        answers: [
-          { text: "The sea", correct: true },
-          { text: "The forest", correct: false },
-          { text: "The desert", correct: false },
-        ],
-      },
-
-      {
-        question: "What is it true in Khal's culture \n to be a leader?",
-        answers: [
-          { text: "Branding a sword", correct: false },
-          { text: "Raping women", correct: false },
-          { text: "Riding a horse", correct: true },
         ],
       },
     ],
@@ -296,17 +193,17 @@ export const data = [
         question: "Who was not in Arya's killing list?",
         answers: [
           { text: "The Hound", correct: false },
-          { text: "Euron Greyjoy", correct: false },
-          { text: "Walder Frey", correct: true },
+          { text: "Euron Greyjoy", correct: true },
+          { text: "Walder Frey", correct: false },
         ],
       },
 
       {
-        question: "To which clan does Khal belong to?",
+        question: "Who was Arya's first mentor and sword instructor",
         answers: [
-          { text: "Night Watch", correct: false },
-          { text: "Dothrakis", correct: true },
-          { text: "White Walkers", correct: false },
+          { text: "Syrio Forel", correct: true },
+          { text: "Jon Snow", correct: false },
+          { text: "Jaquen H’ghar", correct: false },
         ],
       },
 
@@ -325,24 +222,6 @@ export const data = [
           { text: "Pointy", correct: false },
           { text: "Fang", correct: false },
           { text: "Needle", correct: true },
-        ],
-      },
-
-      {
-        question: "What is that Drogo's people fear?",
-        answers: [
-          { text: "The sea", correct: true },
-          { text: "The forest", correct: false },
-          { text: "The desert", correct: false },
-        ],
-      },
-
-      {
-        question: "What is it true in Khal's culture \n to be a leader?",
-        answers: [
-          { text: "Branding a sword", correct: false },
-          { text: "Raping women", correct: false },
-          { text: "Riding a horse", correct: true },
         ],
       },
     ],

@@ -1,7 +1,5 @@
-.container {
-  padding: 2rem 2rem;
+.big-container {
   color: rgb(199, 187, 187);
-  min-height: 100vh;
 }
 
 .quiz-header {
@@ -13,6 +11,11 @@
   padding: 0.8rem;
 }
 
+.nav-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .window-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -25,11 +28,11 @@
 }
 
 .logo {
-  width: 10%;
+  width: 8%;
 }
 
 .main-page-font {
-  width: 25%;
+  width: 8%;
 }
 
 .btn {
@@ -55,7 +58,7 @@
   margin-top: 2rem;
 }
 .btn-choose {
-  background-color: var(--button-blue-primary);
+  color: var(--primary);
   width: 30rem;
 }
 

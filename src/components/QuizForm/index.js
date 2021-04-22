@@ -16,17 +16,17 @@ const QuizForm = ({
     <form className="answers-container" onSubmit={handleSubmit}>
       {!isAnswered ? (
         randomQuestion.answers.map((answer) => (
-          <label htmlFor="answer" className="btn-answer">
-            {answer.text}
-
-            <input
+          <div className="radio-input">
+          <input
               type="radio"
               value={answer.text}
-              className="radio-input"
               name="answer"
               onChange={handleChange}
             />
+          <label htmlFor="answer">
+            {answer.text}
           </label>
+          </div>
         ))
       ) : (
         <FeedBack isCorrect={isCorrect} isWrong={isWrong} />

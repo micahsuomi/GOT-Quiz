@@ -56,7 +56,8 @@ p {
   --font-size-small: 1rem;
   --font-size-verysmall: 1.3rem;
 
-  --button-blue-primary: rgb(24, 81, 95);
+  --primary: #5a1e5a;
+  --primary-light: #9c399c;
   --right-answer: rgb(26, 180, 65);
   --wrong-answer: rgb(204, 38, 38);
   --btn-secondary: rgb(39, 24, 95);

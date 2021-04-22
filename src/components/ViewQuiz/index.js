@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
+import Background from '../Background';
 import QuizForm from "../QuizForm";
 import QuizDescription from "../QuizDescription";
 import GameScore from "../GameScore";
@@ -21,6 +22,7 @@ const ViewQuiz = (props) => {
   const [isWrong, setIsWrong] = useState(false);
   const [score, setScore] = useState(0);
   const [isGameFinished, setIsGameFinished] = useState(false);
+
   //loads all the questions
   useEffect(() => {
     const id = props.match.params.id;
@@ -95,11 +97,13 @@ const ViewQuiz = (props) => {
   };
 
   return (
-    <div className="quiz-container">
+    <Background>
+    <div className="quiz-container"> 
+    <div className="quiz-wrapper">
       <div className="exit">
         <NavLink to="/quiz" className="exit__link">
           <span className="exit__text">Exit Quiz</span>
-          <i className="fas fa-times-circle fa-2x exit__icon"></i>
+          <i className="fas fa-times-circle exit__icon"></i>
         </NavLink>
       </div>
       <div className="description-container">
@@ -149,6 +153,8 @@ const ViewQuiz = (props) => {
         ) : null}
       </div>
     </div>
+    </div> 
+    </Background>
   );
 };
 

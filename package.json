@@ -18,6 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://svcs.sandbox.ebay.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
