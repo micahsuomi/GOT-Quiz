@@ -47,4 +47,5 @@ a {
   --wrong-answer: rgb(204, 38, 38);
   --secondary: rgb(39, 24, 95);
   --secondary-light: rgb(68, 42, 163);
+  --dark-shaded: rgba(49, 48, 53, 0.9);
 }

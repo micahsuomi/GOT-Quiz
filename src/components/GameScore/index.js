@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Button from "../Button";
 import { locale } from "../../utils/locale";
@@ -14,11 +15,14 @@ const GameScore = ({ score, quiz, restartGame }) => {
       </h3>
       <Button
         resOnClick={restartGame}
-        text={locale.quiz.endGame.btnText}
+        text={locale.quiz.restartGame.btnText}
         size="md"
         rounded
         margin
       />
+      <NavLink to="/quiz">
+        <Button text={locale.quiz.exitGame.btnText} size="md" rounded margin />
+      </NavLink>
     </div>
   );
 };

@@ -14,28 +14,56 @@ const QuizForm = ({
   isCorrect,
   isWrong,
   isSelected,
+  exitWindow,
 }) => {
   return (
     <form className="answers-container" onSubmit={handleSubmit}>
       {!isAnswered ? (
         randomQuestion.answers.map((answer) => (
           <div className="radio-input">
-          <input
-              type="radio"
-              value={answer.text}
-              name="answer"
-              onChange={handleChange}
-            />
-          <label htmlFor="answer">
-            {answer.text}
-          </label>
+            {exitWindow ? (
+              <input
+                type="radio"
+                value={answer.text}
+                name="answer"
+                onChange={handleChange}
+                className="radio-disabled"
+                disabled
+              />
+            ) : (
+              <input
+                type="radio"
+                value={answer.text}
+                name="answer"
+                onChange={handleChange}
+              />
+            )}
+
+            <label htmlFor="answer">{answer.text}</label>
           </div>
         ))
       ) : (
         <FeedBack isCorrect={isCorrect} isWrong={isWrong} />
       )}
       {isAnswered || !isSelected ? null : (
-        <Button text={locale.quiz.questions.btnText} rounded size="md" buttonColor= "secondary"/>
+        <>
+          {exitWindow ? (
+            <Button
+              text={locale.quiz.questions.btnText}
+              rounded
+              size="md"
+              buttonColor="secondary"
+            />
+          ) : (
+            <Button
+              text={locale.quiz.questions.btnText}
+              rounded
+              size="md"
+              buttonColor="secondary"
+              disabled
+            />
+          )}
+        </>
       )}
     </form>
   );

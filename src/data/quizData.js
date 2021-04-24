@@ -101,7 +101,8 @@ export const data = [
   },
 
   {
-    id: uuidv4(),
+    // id: uuidv4(),
+    id: 'dany',
     character: "Daenerys Targaryen",
     img: danyBig,
     imgPreview: danySmall,

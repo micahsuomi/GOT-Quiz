@@ -5,6 +5,7 @@ import Background from "../Background";
 import QuizForm from "../QuizForm";
 import QuizDescription from "../QuizDescription";
 import Button from "../Button";
+import ExitGame from "../ExitGame";
 import GameScore from "../GameScore";
 import { locale } from "../../utils/locale";
 
@@ -24,6 +25,7 @@ const ViewQuiz = (props) => {
   const [isWrong, setIsWrong] = useState(false);
   const [score, setScore] = useState(0);
   const [isGameFinished, setIsGameFinished] = useState(false);
+  const [exitWindow, setExitWindow] = useState(false);
   console.log(props);
   //loads all the questions
   useEffect(() => {
@@ -98,15 +100,35 @@ const ViewQuiz = (props) => {
     setScore(0);
   };
 
+  const openExitWindow = () => {
+    setExitWindow(true);
+  };
+
+  const closeWindow = () => {
+    setExitWindow(false);
+  };
+
   return (
     <Background>
       <div className="quiz-container">
-        <div className="quiz-wrapper">
+      {exitWindow && <ExitGame closeWindow={closeWindow} />}
+        <div className={exitWindow ? "quiz-wrapper dark " : "quiz-wrapper"}>
           <div className="exit">
-            <NavLink to="/quiz" className="exit__link">
-              <span className="exit__text">Exit Quiz</span>
-              <i className="fas fa-times-circle exit__icon"></i>
-            </NavLink>
+            {!isGameFinished && (
+              <>
+                {isGameStarted ? (
+                  <button onClick={openExitWindow} className="exit__link">
+                    <span className="exit__text">Exit Quiz</span>
+                    <i className="fas fa-times-circle exit__icon"></i>
+                  </button>
+                ) : (
+                  <NavLink to="/quiz" className="exit__link">
+                    <span className="exit__text">Exit Quiz</span>
+                    <i className="fas fa-times-circle exit__icon"></i>
+                  </NavLink>
+                )}
+              </>
+            )}
           </div>
           <div className="description-container">
             <div className="big-image-left">
@@ -138,6 +160,7 @@ const ViewQuiz = (props) => {
                       isCorrect={isCorrect}
                       isWrong={isWrong}
                       isSelected={isSelected}
+                      exitWindow={exitWindow}
                     />
 
                     <div className="score-box">

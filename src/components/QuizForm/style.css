@@ -21,12 +21,10 @@
   background-color: rgba(33, 148, 177);
   cursor: pointer;
   background-color: var(--btn-secondary);
-
 }
 .btn-answer__select:hover {
   background-color: rgb(24, 113, 136);
 }
-
 
 .btn-answer__select {
   border-radius: 25px;
@@ -38,19 +36,19 @@
   outline: none;
 }
 
-input[type=radio] + label {
-  background:var(--primary);
+input[type="radio"] + label {
+  background: var(--primary);
 }
 
-input[type=radio] + label:hover {
-  background:var(--primary-light);
+input[type="radio"] + label:hover {
+  background: var(--primary-light);
 }
 
-.radio-input input[type=radio] {
+.radio-input input[type="radio"] {
   /* Hide original inputs */
   position: absolute;
   height: 58px;
-  width: 60px; 
+  width: 60px;
   transform: scaleX(4);
   cursor: pointer;
   right: 44%;
@@ -74,20 +72,23 @@ input[type=radio] + label:hover {
   display: inline-block;
   position: relative;
   background-color: var(--primary);
-
 }
 
-.radio-input input[type=radio]:checked + label {
+.radio-input input[type="radio"]:checked + label {
   background-color: var(--primary-light);
   border: 1px solid white;
   transition: 0.5s ease-in-out;
+}
+
+.radio-disabled {
+  pointer-events: none;
 }
 
 .btn-next,
 .btn-restart {
   margin-top: 1rem;
   align-self: center;
-  padding: .8rem;
+  padding: 0.8rem;
   width: 12rem;
   border: none;
   background-color: #5a1e5a;
@@ -107,11 +108,18 @@ input[type=radio] + label:hover {
 }
 
 @media screen and (max-width: 500px) {
-  .radio-input input[type=radio] {
+  .radio-input input[type="radio"] {
     height: 42px;
     right: 40%;
     margin-top: 1.6rem;
   }
+
+  .radio-input label {
+    width: 14rem;
+    padding: 0.9rem;
+    margin: 0.6rem;
+  }
+
   .btn-answer {
     width: 28rem;
     font-size: 17px;

@@ -20,10 +20,27 @@ export const locale = {
         next: {
             btnText: 'Next'
         },
-        endGame: {
+        restartGame: {
             btnText: 'Play again'
+        },
+        exitGame: {
+            btnText: 'Exit game'
+        },
+        exitQuiz: {
+            header: {
+                title: 'Exit quiz?',
+                description: 'Your score will be lost'
+            },
+            confirm: {
+                btnText: 'Confirm'
+            },
+            cancel: {
+                btnText: 'Cancel'
+            }
+    
         }
-    }
+    },
+    
 
 
 }

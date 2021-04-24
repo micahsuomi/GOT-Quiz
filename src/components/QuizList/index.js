@@ -9,7 +9,7 @@ import { locale } from "../../utils/locale";
 import "./style.css";
 
 const QuizList = ({ quizData }) => {
-
+  
 
   const formattedQuizData = quizData.map((data) => (
     <QuizItem
@@ -42,6 +42,8 @@ const QuizList = ({ quizData }) => {
         </div>
       </div>
     </div>
+    
+
     </Background>
   );
 };
