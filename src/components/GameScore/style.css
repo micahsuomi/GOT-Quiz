@@ -22,8 +22,14 @@
 }
 
 @media screen and (max-width: 500px) {
+  .game-score__header {
+    font-size: var(--font-size-medium-small);
+  }
   .game-score {
-    top: 67%;
-    right: 25%;
+    top: 50%;
+    right: 22%;
+  }
+  .game-score__score {
+    font-size: var(--font-size-small);
   }
 }

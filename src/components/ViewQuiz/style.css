@@ -51,7 +51,7 @@
 }
 .exit__text {
   color: whitesmoke;
-  margin-right: 1rem;
+  margin-right: .4em;
   font-size: 24px;
 }
 
@@ -69,8 +69,8 @@
 .big-image-left {
   display: inline-block;
   overflow: hidden;
-  height: 439px;
-  width: 360px;
+  height: 376px;
+  width: 270px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -134,11 +134,25 @@
 }
 
 @media screen and (max-width: 500px) {
+  .quiz-wrapper {
+    min-height: 99vh;
+  }
+  .description-container {
+    min-height: 45vh;
+  }
+  .exit__text {
+    margin-right: .6em;
+    font-size: 17px;
+  }
+  .exit__icon {
+    font-size: 1em;
+  }
   .big-image-left {
-    height: 257px;
-    width: 167px;
+    height: 275px;
+    width: 185px;
   }
   .question {
     font-size: var(--font-size-small);
   }
+
 }

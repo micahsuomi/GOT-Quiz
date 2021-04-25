@@ -47,6 +47,9 @@
   .right-text {
     padding: 1rem;
   }
+  .description-header {
+    font-size: var(--font-size-small);
+  }
   .paragraph {
     font-size: 14px;
   }

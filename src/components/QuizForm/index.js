@@ -53,6 +53,7 @@ const QuizForm = ({
               rounded
               size="md"
               buttonColor="secondary"
+              margin
             />
           ) : (
             <Button
@@ -61,6 +62,7 @@ const QuizForm = ({
               size="md"
               buttonColor="secondary"
               disabled
+              margin
             />
           )}
         </>

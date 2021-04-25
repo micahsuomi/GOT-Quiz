@@ -4,6 +4,11 @@
   -moz-perspective: 150rem;
   height: 24rem;
   width: 13.8rem;
+  border-radius: 7px;
+}
+
+.card img {
+  border-radius: 7px;
 }
 .card-side {
   height: 23.4rem;
@@ -24,6 +29,7 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  border-radius: 7px;
 }
 
 .card-side:hover {
@@ -40,16 +46,16 @@
 
 @media screen and (max-width: 500px) {
   .card {
-    height: 39rem;
-    width: 21.7rem;
+    height: 100%;
+    width: 16.7rem;
   }
 
   .card img {
     width: 100%;
   }
   .card-side {
-    width: 21.7rem;
-    height: 95%;
+    height: 100%;
+    width: 16.7rem;
     opacity: 1;
     background-color: rgba(29, 26, 26, 0.5);
   }
