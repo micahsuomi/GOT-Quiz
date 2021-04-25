@@ -55,11 +55,12 @@ const ViewQuiz = (props) => {
   const startGame = async () => {
     try {
       setTimeout(async () => {
-        let randomQuiz = await quiz.questions.sort(() => Math.random() - 0.5);
+        const randomQuiz = await quiz.questions.sort(() => Math.random() - 0.5);
         setIsGameStarted(true);
         setIsGameFinished(false);
         setRandomQuestions(randomQuiz);
         setQuestionLoaded(true);
+        setScore(0);
       }, 500);
     } catch (err) {
       return err;
@@ -69,7 +70,7 @@ const ViewQuiz = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let selectedAnswer = randomQuestion.answers.find((a) => {
+    const selectedAnswer = randomQuestion.answers.find((a) => {
       return a.text === answer;
     });
 
@@ -79,12 +80,10 @@ const ViewQuiz = (props) => {
       setIsCorrect(true);
       setIsWrong(false);
       setScore(score + 1);
-      console.log("correct", score);
     } else {
       setIsCorrect(false);
       setIsWrong(true);
       setScore(score + 0);
-      console.log("wrong", score);
     }
   };
 
@@ -94,10 +93,8 @@ const ViewQuiz = (props) => {
   };
 
   const restartGame = () => {
-    setIsGameStarted(false);
-    setIsGameFinished(false);
     setCurrentQuestionIndex(0);
-    setScore(0);
+    startGame();
   };
 
   const openExitWindow = () => {
