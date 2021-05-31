@@ -15,9 +15,7 @@ import "./style.css";
 interface ViewQuizProps {
   quizData: Quiz[]
 }
-const ViewQuiz = (
-  props
-  // { quizData }: ViewQuizProps, match: any 
+const ViewQuiz = (props, { quizData }: ViewQuizProps
   ) => {
   const [quiz, setQuiz] = useState([] as unknown as Quiz);
   const [questionLoaded, setQuestionLoaded] = useState(false);
@@ -29,23 +27,19 @@ const ViewQuiz = (
   const [isSelected, setIsSelected] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [isWrong, setIsWrong] = useState(false);
   const [score, setScore] = useState(0);
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [exitWindow, setExitWindow] = useState(false);
   //loads all the questions
   useEffect(() => {
     const id = props.match.params.id;
-    console.log(props)
     const foundQuiz = props.quizData.find((data: Quiz) => {
       return data.id === id;
     });
-    console.log(foundQuiz)
     if(foundQuiz) {
       setQuiz(foundQuiz);
     }
-    console.log(quiz)
-  }, [quiz, props.match.params.id, props.quizData]);
+  }, [quiz, props.match.params.id, quizData]);
 
   useEffect(() => {
     setRandomQuestion(randomQuestions[currentQuestionIndex]);
@@ -54,7 +48,6 @@ const ViewQuiz = (
   const nextQuestion = () => {
     setCurrentQuestionIndex((currentQuestionIndex = currentQuestionIndex + 1));
     setIsAnswered(false);
-
     if (randomQuestions.length < currentQuestionIndex + 1) {
       console.log("game over");
       setIsGameFinished(true);
@@ -66,7 +59,7 @@ const ViewQuiz = (
   const startGame = async () => {
     try {
       setTimeout(async () => {
-        const randomQuiz = await quiz.questions.sort(() => Math.random() - 0.5);
+        const randomQuiz = quiz.questions.sort(() => Math.random() - 0.5);
         setIsGameStarted(true);
         setIsGameFinished(false);
         setRandomQuestions(randomQuiz);
@@ -88,11 +81,9 @@ const ViewQuiz = (
     setIsSelected(false);
     if (selectedAnswer?.correct) {
       setIsCorrect(true);
-      setIsWrong(false);
       setScore(score + 1);
     } else {
       setIsCorrect(false);
-      setIsWrong(true);
       setScore(score + 0);
     }
   };
@@ -107,13 +98,8 @@ const ViewQuiz = (
     startGame();
   };
 
-  const openExitWindow = () => {
-    setExitWindow(true);
-  };
-
-  const closeWindow = () => {
-    setExitWindow(false);
-  };
+  const openExitWindow = () => setExitWindow(true);
+  const closeWindow = () => setExitWindow(false);
 
   return (
     <Background>
@@ -164,7 +150,6 @@ const ViewQuiz = (
                       handleChange={handleChange}
                       randomQuestion={randomQuestion}
                       isCorrect={isCorrect}
-                      isWrong={isWrong}
                       isSelected={isSelected}
                       exitWindow={exitWindow}
                     />

@@ -8,7 +8,10 @@ import { locale } from "../../utils/locale";
 import { Quiz } from "../../types"
 import "./style.css";
 
-const QuizList = ({ quizData }) => {
+interface QuizListProps {
+  quizData: Quiz[]
+}
+const QuizList = ({ quizData }: QuizListProps) => {
   const formattedQuizData = quizData.map((data: Quiz) => (
     <QuizItem
       key={data.id}

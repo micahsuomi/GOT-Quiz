@@ -3,11 +3,17 @@ import { NavLink } from "react-router-dom";
 
 import Button from "../Button";
 import { locale } from "../../utils/locale";
-
+import { Quiz } from "../../types"
 
 import "./style.css";
 
-const GameScore = ({ score, quiz, restartGame }) => {
+interface GameScoreProps {
+  score: number
+  quiz: Quiz
+  restartGame: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+}
+
+const GameScore = ({ score, quiz, restartGame }: GameScoreProps) => {
   console.log(quiz, restartGame)
   return (
     <div className="game-score">

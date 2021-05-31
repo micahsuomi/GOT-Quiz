@@ -6,7 +6,11 @@ import { locale } from "../../utils/locale";
 
 import "./style.scss";
 
-const ExitGame = ({ closeWindow }) => {
+interface ExitGameProps {
+  closeWindow: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+}
+
+const ExitGame = ({ closeWindow }: ExitGameProps) => {
   const { exitQuiz } = locale.quiz;
   return (
     <div className="exit-game">

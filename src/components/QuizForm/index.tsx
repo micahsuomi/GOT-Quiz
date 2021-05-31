@@ -13,7 +13,6 @@ interface QuizFormProps {
   handleChange: React.ChangeEventHandler<HTMLInputElement>
   randomQuestion: Question
   isCorrect: boolean
-  isWrong: boolean
   isSelected: boolean
   exitWindow: boolean
 }
@@ -23,7 +22,6 @@ const QuizForm = ({
   handleChange,
   randomQuestion,
   isCorrect,
-  isWrong,
   isSelected,
   exitWindow,
 }: QuizFormProps ) => {
@@ -54,7 +52,7 @@ const QuizForm = ({
           </div>
         ))
       ) : (
-        <FeedBack isCorrect={isCorrect} isWrong={isWrong} />
+        <FeedBack isCorrect={isCorrect} />
       )}
       {isAnswered || !isSelected ? null : (
         <>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { quizData } from "./data/quizData";
-import { Quiz } from "types"
 import Home from "./components/Home";
 import ViewQuiz from "./components/ViewQuiz";
 import QuizList from "./components/QuizList";
@@ -22,7 +21,7 @@ const App = () => {
         <Switch>
           <Route
             path="/quiz/:id"
-            component={(props: any) => <ViewQuiz quizData={quizData} match={props.match} {...props} />}
+            component={(props: any) => <ViewQuiz quizData={quizData} {...props} />}
           />
 
           <Route
