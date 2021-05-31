@@ -18,7 +18,6 @@ const Home = () => {
             src="https://fontmeme.com/permalink/190916/169cc6733bc5cd5b5ba887c12d1ecde3.png"
             alt="game-of-thrones-font"
             className="quiz-font"
-            border="0"
           />
           <NavLink to="/quiz">
             <Button

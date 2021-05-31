@@ -2,7 +2,11 @@ import React from "react";
 
 import "./style.css";
 
-const FeedBack = ({ isCorrect, isWrong }) => {
+interface FeedBackProps {
+  isCorrect: boolean;
+  isWrong: boolean;
+}
+const FeedBack = ({ isCorrect, isWrong }: FeedBackProps) => {
   return (
     <div className="feedback-container">
       {isCorrect ? (

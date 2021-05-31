@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom";
 import Button from "../Button";
 import { locale } from "../../utils/locale";
 
+
 import "./style.css";
 
 const GameScore = ({ score, quiz, restartGame }) => {
+  console.log(quiz, restartGame)
   return (
     <div className="game-score">
       <h1 className="game-score__header">Game Finished</h1>

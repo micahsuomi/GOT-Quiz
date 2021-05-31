@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { data } from "./data/quizData";
-
+import { quizData } from "./data/quizData";
+import { Quiz } from "types"
 import Home from "./components/Home";
 import ViewQuiz from "./components/ViewQuiz";
 import QuizList from "./components/QuizList";
@@ -10,11 +10,11 @@ import QuizList from "./components/QuizList";
 import "./App.css";
 
 const App = () => {
-  const [quizData, setQuizData] = useState([]);
+  const [data, setData] = useState([] as any);
 
   useEffect(() => {
-    setQuizData(data);
-  }, [quizData]);
+    setData(quizData);
+  }, [data]);
 
   return (
     <BrowserRouter>
@@ -22,7 +22,7 @@ const App = () => {
         <Switch>
           <Route
             path="/quiz/:id"
-            component={(props) => <ViewQuiz quizData={quizData} {...props} />}
+            component={(props: any) => <ViewQuiz quizData={quizData} match={props.match} {...props} />}
           />
 
           <Route

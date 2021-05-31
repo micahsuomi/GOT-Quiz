@@ -5,13 +5,11 @@ import Background from "../Background";
 import QuizItem from "../QuizItem";
 import logo from "../../imgs/logo.png";
 import { locale } from "../../utils/locale";
-
+import { Quiz } from "../../types"
 import "./style.css";
 
 const QuizList = ({ quizData }) => {
-  
-
-  const formattedQuizData = quizData.map((data) => (
+  const formattedQuizData = quizData.map((data: Quiz) => (
     <QuizItem
       key={data.id}
       id={data.id}
@@ -29,7 +27,6 @@ const QuizList = ({ quizData }) => {
             src="https://fontmeme.com/permalink/190916/695e734041c90d051144596effcc8ad0.png"
             alt="game-of-thrones-font"
             className="main-page-font"
-            border="0"
           />
         </NavLink>
       </h1>
@@ -42,8 +39,6 @@ const QuizList = ({ quizData }) => {
         </div>
       </div>
     </div>
-    
-
     </Background>
   );
 };

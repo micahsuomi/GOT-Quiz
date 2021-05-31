@@ -6,7 +6,13 @@ import { locale } from "../../utils/locale";
 
 import "./style.css";
 
-const QuizItem = ({ id, character, image }) => {
+interface QuizItemProps {
+  id: string
+  character: string
+  image: string 
+}
+
+const QuizItem = ({ id, character, image }: QuizItemProps) => {
   return (
     <div className="card">
       <img src={image} alt={character} />

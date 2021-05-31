@@ -8,14 +8,21 @@ import Button from "../Button";
 import ExitGame from "../ExitGame";
 import GameScore from "../GameScore";
 import { locale } from "../../utils/locale";
+import { Quiz, Question} from "../../types"
 
 import "./style.css";
 
-const ViewQuiz = (props) => {
-  const [quiz, setQuiz] = useState([]);
+interface ViewQuizProps {
+  quizData: Quiz[]
+}
+const ViewQuiz = (
+  props
+  // { quizData }: ViewQuizProps, match: any 
+  ) => {
+  const [quiz, setQuiz] = useState([] as unknown as Quiz);
   const [questionLoaded, setQuestionLoaded] = useState(false);
-  const [randomQuestions, setRandomQuestions] = useState([]);
-  const [randomQuestion, setRandomQuestion] = useState({});
+  const [randomQuestions, setRandomQuestions] = useState([] as Question[]);
+  const [randomQuestion, setRandomQuestion] = useState({} as Question);
   const [isGameStarted, setIsGameStarted] = useState(false);
   let [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState("");
@@ -26,14 +33,18 @@ const ViewQuiz = (props) => {
   const [score, setScore] = useState(0);
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [exitWindow, setExitWindow] = useState(false);
-  console.log(props);
   //loads all the questions
   useEffect(() => {
     const id = props.match.params.id;
-    const foundQuiz = props.quizData.find((data) => {
+    console.log(props)
+    const foundQuiz = props.quizData.find((data: Quiz) => {
       return data.id === id;
     });
-    setQuiz(foundQuiz);
+    console.log(foundQuiz)
+    if(foundQuiz) {
+      setQuiz(foundQuiz);
+    }
+    console.log(quiz)
   }, [quiz, props.match.params.id, props.quizData]);
 
   useEffect(() => {
@@ -69,14 +80,13 @@ const ViewQuiz = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const selectedAnswer = randomQuestion.answers.find((a) => {
       return a.text === answer;
     });
 
     setIsAnswered(true);
     setIsSelected(false);
-    if (selectedAnswer.correct) {
+    if (selectedAnswer?.correct) {
       setIsCorrect(true);
       setIsWrong(false);
       setScore(score + 1);
@@ -87,7 +97,7 @@ const ViewQuiz = (props) => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setAnswer(e.target.value);
     setIsSelected(true);
   };
@@ -134,7 +144,6 @@ const ViewQuiz = (props) => {
 
             {isGameStarted || isGameFinished ? null : (
               <QuizDescription
-                quiz={quiz}
                 character={quiz.character}
                 characterDescription={quiz.characterDescription}
                 isGameStarted={isGameStarted}
@@ -179,7 +188,7 @@ const ViewQuiz = (props) => {
               <GameScore score={score} quiz={quiz} restartGame={restartGame} />
             ) : null}
           </div>
-        </div>
+        </div> 
       </div>
     </Background>
   );

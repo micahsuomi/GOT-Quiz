@@ -2,7 +2,10 @@ import React from "react";
 
 import "./style.css";
 
-const Background = ({children}) => {
+interface BackgroundProps {
+  children: React.ReactNode
+}
+const Background = ({ children }: BackgroundProps) => {
   return (
     <div className="background">
       {children}

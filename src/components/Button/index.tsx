@@ -3,6 +3,18 @@ import classNames from "classnames";
 
 import styles from "./styles.module.scss";
 
+interface ButtonProps {
+  text: string
+  size: string
+  buttonColor?: string
+  rounded: boolean
+  margin?: boolean
+  marginBottom?: boolean
+  className?: string
+  resOnClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+  disabled?: boolean
+}
+
 const Button = ({ 
     text, 
     size, 
@@ -11,8 +23,9 @@ const Button = ({
     margin = false,
     marginBottom = false,
     className,
-    resOnClick
-}) => {
+    resOnClick,
+    disabled
+}: ButtonProps) => {
   return (
     <button
       onClick={resOnClick}

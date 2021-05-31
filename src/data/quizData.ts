@@ -1,5 +1,4 @@
 //QUIZ QUESTIONS
-import { v4 as uuidv4 } from "uuid";
 
 import kahlImage from "../imgs/khal-drogo.jpg";
 import kahlImageSmall from "../imgs/khal-small.jpg";
@@ -11,9 +10,9 @@ import jonSmall from "../imgs/jon-small.png";
 import jonBig from "../imgs/jon-big.jpg";
 import aryaSmall from "../imgs/arya-small.png";
 
-export const data = [
+export const quizData = [
   {
-    id: uuidv4(),
+    id: "kahl-drogo",
     character: "Kahl Drogo",
     img: kahlImage,
     imgPreview: kahlImageSmall,
@@ -80,7 +79,7 @@ export const data = [
   },
 
   {
-    id: uuidv4(),
+    id: "tyron-lannister",
     character: "Tyron Lannister",
     img: tyronImage,
     imgPreview: tyronSmall,
@@ -102,7 +101,7 @@ export const data = [
 
   {
     // id: uuidv4(),
-    id: 'dany',
+    id: "daenerys-targaryen",
     character: "Daenerys Targaryen",
     img: danyBig,
     imgPreview: danySmall,
@@ -151,7 +150,7 @@ export const data = [
   },
 
   {
-    id: uuidv4(),
+    id: "jon-snow",
     character: "Jon Snow",
     img: jonBig,
     imgPreview: jonSmall,
@@ -181,7 +180,7 @@ export const data = [
   },
 
   {
-    id: uuidv4(),
+    id: "arya-stark",
     character: "Arya Stark",
     img: "https://s3.r29static.com/bin/entry/74a/x,80/2171313/image.jpg",
     imgPreview: aryaSmall,

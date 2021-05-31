@@ -4,8 +4,19 @@ import FeedBack from "../FeedBack/index";
 import Button from "../Button";
 import { locale } from "../../utils/locale";
 
+import { Question } from "../../types"
 import "./style.css";
 
+interface QuizFormProps {
+  handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void
+  isAnswered: boolean
+  handleChange: React.ChangeEventHandler<HTMLInputElement>
+  randomQuestion: Question
+  isCorrect: boolean
+  isWrong: boolean
+  isSelected: boolean
+  exitWindow: boolean
+}
 const QuizForm = ({
   handleSubmit,
   isAnswered,
@@ -15,12 +26,12 @@ const QuizForm = ({
   isWrong,
   isSelected,
   exitWindow,
-}) => {
+}: QuizFormProps ) => {
   return (
     <form className="answers-container" onSubmit={handleSubmit}>
       {!isAnswered ? (
         randomQuestion.answers.map((answer) => (
-          <div className="radio-input">
+          <div className="radio-input" key={answer.text}>
             {exitWindow ? (
               <input
                 type="radio"

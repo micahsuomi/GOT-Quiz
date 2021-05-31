@@ -5,12 +5,18 @@ import { locale } from "../../utils/locale";
 
 import "./style.css";
 
+interface QuizDescriptionProps {
+  character: string
+  characterDescription: string
+  startGame: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+  isGameStarted: boolean
+}
 const QuizDescription = ({
   character,
   characterDescription,
   startGame,
   isGameStarted,
-}) => {
+}: QuizDescriptionProps) => {
   return (
     <div className="description-wrapper">
       <div className="right-text">
